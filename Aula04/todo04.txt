@@ -1,0 +1,18 @@
+Para Leitura
+
+https://www.w3schools.com/whatis/whatis_http.asp
+https://www.w3schools.com/tags/ref_httpmethods.asp
+https://www.w3schools.com/tags/ref_httpmessages.asp
+
+https://www.npmjs.com
+https://www.npmjs.com/package/express
+
+Exercícios
+    Criar um LINK na pagina-inicial para a nossa página da aula 02.
+        * Crie uma nova rota app.get(...)
+        * Envie o arquivo HTML
+    
+    Adicionar o calculo do fatorial da última aula para dentro do sistema
+    que está utilizando o EXPRESS
+
+    
