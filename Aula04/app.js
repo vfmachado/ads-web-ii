@@ -43,7 +43,7 @@ app.get("/fat", (req, res) => {
 //use - define um midleware para a aplicação; Neste caso
 //qualquer rota com qualquer tipo de requisição.
 app.use('*', (req, res) => {
-    res.status(404); //setando o status code como não encontrado
+    res.status(404); //setando o status code como não encontradoS
     res.write("Pagina nao encontrada");
     res.end();
 });
@@ -58,4 +58,5 @@ const funcaoOK = function() {
 //app.listen(3000, () => console.log("Listening at 3000"));
 app.listen(3000, funcaoOK);
 
-console.log("Depois do listen...");
+console.log("Depois do listen..."); //aparece antes da mensagem do listen
+// pq o mundo web é assíncrono... aceite!

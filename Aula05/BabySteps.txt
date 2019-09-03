@@ -1,0 +1,27 @@
+
+... no terminal
+1. npm init     iniciar o projeto em nodejs
+                utilizando o npm como gerenciador de
+                pacotes já na pasta onde vou colocar
+                meu código
+
+2. No arquivo package.json adicionar o script de start
+    "start": "nodemon app"
+
+3. Instalar o nodemon (pelo terminal)
+    npm install nodemon
+
+4. Instalar o express (pelo terminal)
+    npm install express
+
+5. Testar a configuração (no app.js)
+    console.log("Hello World... with nodemon!");
+    ... no terminal ...
+    npm start
+
+6. configuração mínima do express
+    a. importar o express
+    b. criar um app executando o express
+    c. uma rota 
+    d. listen
+
