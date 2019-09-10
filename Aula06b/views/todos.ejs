@@ -1,0 +1,113 @@
+
+<%- include('partials/head') %>
+
+</head>
+
+<body>
+
+    
+    <%- include('partials/navegacao') %>
+
+    <main>
+        <h2>Lista de Produtos</h2>
+
+        <div class="grid">
+            <% for (prod of prods) { %>
+                <article class="card product">
+                        <header class="card-header">
+                            <h1 class="product-title"><%= prod.name %></h1>
+                        </header>
+                        <div class="card-image">
+                            <img src="<%= prod.imageUrl %>">
+                        </div>
+                        <div class="card-content">  
+                            <h2 class="product-price">R$ <%= prod.price %></h2>
+                            <p class="product-description"><%= prod.description %></p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/" class="btn">Detalhar</a>
+                            <a href="/" class="btn">Adicionar</a>
+                        </div>
+                    </article>
+                    <% } %>
+
+
+            <article class="card product">
+                <header class="card-header">
+                    <h1 class="product-title">Produto 1</h1>
+                </header>
+                <div class="card-image">
+                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
+                </div>
+                <div class="card-content">
+                    <h2 class="product-price">R$ 0,99</h2>
+                    <p class="product-description">Produto Genérico!</p>
+                </div>
+                <div class="card-actions">
+                    <a href="/" class="btn">Detalhar</a>
+                    <a href="/" class="btn">Adicionar</a>
+                </div>
+            </article>
+
+            <article class="card product">
+                <header class="card-header">
+                    <h1 class="product-title">Produto 2</h1>
+                </header>
+                <div class="card-image">
+                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
+                </div>
+                <div class="card-content">
+                    <h2 class="product-price">R$ 2,99</h2>
+                    <p class="product-description">Produto Genérico!</p>
+                </div>
+                <div class="card-actions">
+                    <a href="/" class="btn">Detalhar</a>
+                    <a href="/" class="btn">Adicionar</a>
+                </div>
+            </article>
+
+            <article class="card product">
+                <header class="card-header">
+                    <h1 class="product-title">Produto 3</h1>
+                </header>
+                <div class="card-image">
+                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
+                </div>
+                <div class="card-content">
+                    <h2 class="product-price">R$ 3,99</h2>
+                    <p class="product-description">Produto Genérico!</p>
+                </div>
+                <div class="card-actions">
+                    <a href="/" class="btn">Detalhar</a>
+                    <a href="/" class="btn">Adicionar</a>
+                </div>
+            </article>
+
+            <article class="card product">
+                <header class="card-header">
+                    <h1 class="product-title">Produto 4</h1>
+                </header>
+                <div class="card-image">
+                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
+                </div>
+                <div class="card-content">
+                    <h2 class="product-price">R$ 4,99</h2>
+                    <p class="product-description">Produto Genérico!</p>
+                </div>
+                <div class="card-actions">
+                    <a href="/" class="btn">Detalhar</a>
+                    <a href="/" class="btn">Adicionar</a>
+                </div>
+            </article>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        Desenvolvido por Vinícius Machado (Prof Vini)
+    </footer>
+</body>
+
+</html>
