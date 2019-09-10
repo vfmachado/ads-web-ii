@@ -17,4 +17,19 @@ router.get('/ver-usuarios', (req, res) => {
     res.end();
 });
 
+router.get('/add-product', (req, res) => {
+    /*res.sendFile(
+        path.join(__dirname, "views", "add-product.html")
+    );
+    */
+   res.render('add-prod');
+});
+
+router.post('/add-product', (req, res) => {
+   
+    console.log(JSON.stringify(req.body));
+    todosProdutos.push(req.body);
+    res.redirect('/inicial');
+});
+
 module.exports = router;

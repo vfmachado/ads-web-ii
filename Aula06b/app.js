@@ -1,5 +1,5 @@
 //por enquanto fica aqui...
-const todosProdutos = [];
+todosProdutos = [];
 
 console.log(`Hello World... My App is Alive!!!
             \n ... from Nodemon =D`);
@@ -70,20 +70,7 @@ app.get('/inicial', (req, res) => {
    res.render('todos', {prods: todosProdutos})
 });
 
-app.get('/add-product', (req, res) => {
-    /*res.sendFile(
-        path.join(__dirname, "views", "add-product.html")
-    );
-    */
-   res.render('add-prod');
-});
 
-app.post('/add-product', (req, res) => {
-   
-    console.log(JSON.stringify(req.body));
-    todosProdutos.push(req.body);
-    res.redirect('/inicial-fake');
-});
 
 
 //antes da página de erro devemos definir os nossos routers

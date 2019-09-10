@@ -10,7 +10,7 @@
 
     <main>
         <h2>Lista de Produtos</h2>
-
+        <% if (prods.length > 0) { %>
         <div class="grid">
             <% for (prod of prods) { %>
                 <article class="card product">
@@ -31,78 +31,10 @@
                     </article>
                     <% } %>
 
-
-            <article class="card product">
-                <header class="card-header">
-                    <h1 class="product-title">Produto 1</h1>
-                </header>
-                <div class="card-image">
-                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
-                </div>
-                <div class="card-content">
-                    <h2 class="product-price">R$ 0,99</h2>
-                    <p class="product-description">Produto Genérico!</p>
-                </div>
-                <div class="card-actions">
-                    <a href="/" class="btn">Detalhar</a>
-                    <a href="/" class="btn">Adicionar</a>
-                </div>
-            </article>
-
-            <article class="card product">
-                <header class="card-header">
-                    <h1 class="product-title">Produto 2</h1>
-                </header>
-                <div class="card-image">
-                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
-                </div>
-                <div class="card-content">
-                    <h2 class="product-price">R$ 2,99</h2>
-                    <p class="product-description">Produto Genérico!</p>
-                </div>
-                <div class="card-actions">
-                    <a href="/" class="btn">Detalhar</a>
-                    <a href="/" class="btn">Adicionar</a>
-                </div>
-            </article>
-
-            <article class="card product">
-                <header class="card-header">
-                    <h1 class="product-title">Produto 3</h1>
-                </header>
-                <div class="card-image">
-                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
-                </div>
-                <div class="card-content">
-                    <h2 class="product-price">R$ 3,99</h2>
-                    <p class="product-description">Produto Genérico!</p>
-                </div>
-                <div class="card-actions">
-                    <a href="/" class="btn">Detalhar</a>
-                    <a href="/" class="btn">Adicionar</a>
-                </div>
-            </article>
-
-            <article class="card product">
-                <header class="card-header">
-                    <h1 class="product-title">Produto 4</h1>
-                </header>
-                <div class="card-image">
-                    <img src="https://i.pinimg.com/originals/f1/66/76/f1667644c763dd86f09a6f0edf877949.jpg">
-                </div>
-                <div class="card-content">
-                    <h2 class="product-price">R$ 4,99</h2>
-                    <p class="product-description">Produto Genérico!</p>
-                </div>
-                <div class="card-actions">
-                    <a href="/" class="btn">Detalhar</a>
-                    <a href="/" class="btn">Adicionar</a>
-                </div>
-            </article>
-
         </div>
-
-
+        <% } else { %>
+            <h1>Nenhum produto cadastrado</h1>
+        <% } %>
     </main>
 
     <footer>
