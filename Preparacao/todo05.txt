@@ -1,0 +1,22 @@
+02/09 Exercícios de Treino
+
+Melhorar o CSS da página de Cadastro de Produtos.
+    Sugestão: Criar um segundo css e adicionar na página
+
+Melhorar as páginas com o intuito de vender componentes de PC
+    Sugestão: em paralelo com as aulas desenvolvam sua própria versão de e-commerce
+
+Exercício:
+
+    Separar o sistema em rotas do usuario e rotas do administrador.
+
+    Salvar os produtos em um arquivo TXT
+    Quando abrir a pagina inicial-fake carregar os dados deste arquivo
+
+    Na página inicial-fake clicar em cima do item e levar para uma página do item.
+    
+
+Desafio:
+    Como reaproveitar código HTML em várias páginas?
+    Alterar em um lugar.... e refletir em várias páginas...
+        inclusive, detalhar diferentes itens.
