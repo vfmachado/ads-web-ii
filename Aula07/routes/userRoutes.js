@@ -3,9 +3,20 @@ const express = require('express');
 
 const router = express.Router();
 
+const fs = require('fs');
+const path = require('path');
+
 // '/' é a minha URL
 // 'todos' é o meu arquivo ejs
 router.get('/', (req, res) =>{
+
+    //ler do arquivo
+    let conteudoArquivo = fs.readFileSync(
+        path.join(__dirname, '..', 'data', 'prods.json')
+    );
+    
+    todosProdutos = JSON.parse(conteudoArquivo); 
+
     res.render('todos', {prods: todosProdutos})
 });
 

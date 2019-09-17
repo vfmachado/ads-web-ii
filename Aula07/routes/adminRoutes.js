@@ -4,6 +4,10 @@
 
 const express = require('express');
 
+const fs = require('fs');
+const path = require('path');
+
+
 //meu roteador personalizado.
 const router = express.Router();
 
@@ -29,6 +33,9 @@ router.post('/add-product', (req, res) => {
    
     console.log(JSON.stringify(req.body));
     todosProdutos.push(req.body);
+
+   salvarNoArquivo();
+
     res.redirect('/');
 });
 
@@ -44,7 +51,18 @@ router.get('/excluir/:nome_produto', (req, res) => {
         }
     }
 
+    salvarNoArquivo();
+
     res.redirect('/');
 });
 
 module.exports = router;
+
+
+const salvarNoArquivo = () => {
+     //salvar todos os produtos em um arquivo.
+     fs.writeFileSync(
+        path.join(__dirname, '..', 'data', 'prods.json'),
+        JSON.stringify(todosProdutos)
+    );
+}
