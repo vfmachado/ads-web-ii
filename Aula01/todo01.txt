@@ -1,3 +1,0 @@
-05/08
-Instalar o NodeJS no computador pessoal de vocês.
-
