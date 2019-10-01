@@ -1,0 +1,17 @@
+<%- include('header') %>
+
+<body>
+    
+    <h2>Minha Lista de Posts</h2>
+
+    <ul>
+        <!-- vem do arquivo de rotas um objeto chamado posts -->
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <li><a href="/detalhar/<%= posts[i].id %>"><%= posts[i].titulo %></a></li>
+        <% } %>
+    </ul>
+
+    <a href="/adicionar">ADD POST</a>
+
+</body>
+</html>

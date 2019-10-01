@@ -1,0 +1,16 @@
+{
+  "name": "bancodedados",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "Prof Vini",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3"
+  }
+}

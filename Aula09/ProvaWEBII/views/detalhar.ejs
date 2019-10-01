@@ -1,0 +1,32 @@
+<%- include('header') %>
+
+<body>
+
+    <!-- estou considerando que vou receber um objeto chamado post -->
+    <h1>Titulo: <%= post.titulo %></h1>
+
+    <p><%= post.texto %></p>
+
+    <a href="/editar/<%= post.id %>">EDITAR</a><br>
+    <a href="/excluir/<%= post.id %>">EXCLUIR</a>
+
+
+    <hr>
+
+    <h2>Comentários</h2>
+
+    <form action="/add-comentario/<%= post.id %>" method="POST">
+        <input name="texto">
+        <input type="submit" value="VAI">
+    </form>
+
+    <ul>
+        <% for (let i = 0; i < post.comentarios.length; i++) { %>
+        <li>    <%= post.comentarios[i].texto %> </li>
+        <% } %>
+    </ul>
+
+
+</body>
+
+</html>
