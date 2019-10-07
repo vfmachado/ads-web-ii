@@ -1,0 +1,19 @@
+{
+  "name": "aula10",
+  "version": "1.0.0",
+  "description": "Exemplo Completo Banco de Dados",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "Vinicius Machado",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3"
+  }
+}
