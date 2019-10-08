@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width="device-width", initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Series</h1>
+    <a href="/add-serie">Inserir nova série</a>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>IMAGE</th>
+            <th>NAME</th>
+            <th>GENRE</th>
+            <th>DESCRIPTION</th>
+            <th>EXCLUIR</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <% for (let s of series) { %>
+          <tr>
+            <td><img src="<%= s.image_url %>" height="150px"></td>
+            <td><%= s.name %></td>
+            <td><%= s.genre %></td>
+            <td><%= s.description %></td>
+            <td><a href="excluir/<%= s.id %>">EXCLUIR</a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+</body>
+</html>
