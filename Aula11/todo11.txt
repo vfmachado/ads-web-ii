@@ -1,0 +1,17 @@
+Exercícios
+
+    Cadastro de usuários comuns
+
+    Administrador pode cadastrar novos admins.
+
+===================================================
+
+
+
+
+========================== EXTRA ========================
+LIVROS:
+    CRACKING THE CODING INTERVIEW
+
+    TDD - TEST DRIVEN DEVELOPMENT
+
