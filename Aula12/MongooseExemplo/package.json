@@ -1,0 +1,20 @@
+{
+  "name": "mongooseexemplo",
+  "version": "1.0.0",
+  "description": "Exemplo utilizando mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "Mongoose",
+    "NoSQL"
+  ],
+  "author": "Vinicius Machado",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.7.6",
+    "nodemon": "^1.19.4"
+  }
+}
