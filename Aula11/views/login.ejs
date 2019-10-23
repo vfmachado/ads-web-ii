@@ -11,6 +11,11 @@
     <main>
 
         <% if (!logado) { %> 
+
+            <% if (erro) { %>
+                <h2><%= erro %></h2>
+            <% } %>
+
             <form method="POST">
             <label>E-mail</label>
             <input type="email" name="email"/>
@@ -20,8 +25,11 @@
             
             <br>
             <input type="submit" value="Entrar">
-
+            
             </form>
+
+            <br>
+            <a href="/new-user">Não tenho cadastro</a>
 
         <% } else { %>
             <h1>Vc já logou... Aproveite e compre muito</h1>

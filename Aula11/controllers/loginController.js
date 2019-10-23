@@ -5,7 +5,8 @@ exports.MostraLogin = (req, res) => {
      
     res.render('login', {pageTitle: "IFRS Eletrônicos - Login",
         logado: req.session.loggedIn,
-        user : req.session.user
+        user : req.session.user,
+        erro: null
     })
 
 }
@@ -50,7 +51,11 @@ exports.FazLogin = (req, res) => {
         } else {
             //res.write("Usuário e senhas não conferem!");
             //res.end();
-            res.redirect('/login');
+            res.render('login', {pageTitle: "IFRS Eletrônicos - Login",
+            logado: req.session.loggedIn,
+            user : req.session.user,
+            erro: "Dados não conferem"
+        });
         }
     })
     .catch(erro => {
