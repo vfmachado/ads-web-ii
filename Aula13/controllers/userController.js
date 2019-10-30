@@ -3,7 +3,10 @@ const Product = require('../models/Product');
 
 
 exports.MostraPaginaInicial = (req, res) => {
-     
+    
+    console.log(req.session);
+    
+
     Product.find()
     .then(resultado => {
 
