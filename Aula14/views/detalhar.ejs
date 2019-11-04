@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+
+</head>
+
+<body>
+
+
+    <%- include('partials/navegacao') %>
+
+    <main>
+        <h2>Produto Selecionado</h2>
+
+       
+            <header class="card-header">
+                <h1 class="product-title"><%= product.name %></h1>
+            </header>
+            
+            <% for (let i = 0; i < product.images.length; i++) { %>
+            <div class="card-image">
+                <img src="/<%= product.images[i] %>">
+            </div>
+            <% } %>
+            
+            <div class="card-content">
+                <h2 class="product-price">R$ <%= product.price %></h2>
+                <p class="product-description"><%= product.description %></p>
+            </div>
+            <div class="card-actions">
+                <% if (user && user.admin) { %>
+                    
+                        <a href="/admin/excluir/<%= product._id %>" class="btn">Excluir</a>
+                    
+                <% } %>
+                    <a href="/" class="btn">Adicionar</a>
+            </div>
+      
+    </main>
+
+    <footer>
+        Desenvolvido por Vinícius Machado (Prof Vini)
+    </footer>
+</body>
+
+</html>

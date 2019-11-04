@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minha página</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <!-- itens da esquerda -->
+            <ul class="main-header-list">
+                <li class="main-header-item"><a href="/">Início</a></li>
+                <li class="main-header-item"><a href="/">Produtos</a></li>
+                <li class="main-header-item"><a href="/">Ofertas</a></li>
+            </ul>
+            <!-- itens da direita -->
+            <ul class="main-header-list">
+                <li class="main-header-item"><a href="/add-product">Add Produto</a></li>
+                <li class="main-header-item"><a href="/">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <form action="/add-product" method="POST">
+            <label for="name">Nome</label>
+            <input name="name" id="name"/>
+            <br>
+            <label for="price">Preço</label>
+            <input type="number" name="price" id="price"/>
+            <br>
+            <label for="description">Descricao</label>
+            <input name="description" id="description"/>
+            <br>
+            <label for="imageUrl">URL da Imagem</label>
+            <input name="imageUrl" id="imageUrl"/>
+            <br>
+            <button>Cadastrar!!!</button>
+            <br>
+        </form>
+
+    </main>
+
+    <footer>
+        Desenvolvido por Vinícius Machado (Prof Vini)
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<header class="main-header">
+    <nav class="main-header-nav">
+        <!-- itens da esquerda -->
+        <ul class="main-header-list">
+            <li class="main-header-item"><a href="/">Início</a></li>
+            <li class="main-header-item"><a href="/">Produtos</a></li>
+            <li class="main-header-item"><a href="/">Ofertas</a></li>
+        </ul>
+        <!-- itens da direita -->
+        <ul class="main-header-list">
+            
+            <% if (!user) { %>
+            
+                <li class="main-header-item"><a href="/login">Login</a></li>
+
+            <% } else if (user && user.isadmin) { %>
+            
+                <li class="main-header-item"><a href="/admin/add-product">Add Produto</a></li>
+                <li class="main-header-item"><a href="/login">ADMIN</a></li>
+            
+            <% } else if (user && !user.isadmin) { %>
+            
+                <li class="main-header-item"><a href="/login"><%= user.name.split(" ")[0] %></a></li>
+            
+            <% } %>
+               
+             
+        </ul>
+    </nav>
+</header>

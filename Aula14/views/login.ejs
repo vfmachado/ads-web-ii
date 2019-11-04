@@ -1,0 +1,45 @@
+
+<%- include('partials/head') %>
+
+</head>
+
+<body>
+
+    
+    <%- include('partials/navegacao') %>
+
+    <main>
+
+        <% if (!logado) { %> 
+
+            <% if (locals.erro) { %>
+                <h2><%= erro %></h2>
+            <% } %>
+
+            <form method="POST">
+            <label>E-mail</label>
+            <input type="email" name="email"/>
+            <br>
+            <label>Senha</label>
+            <input type="password" name="pass"/>
+            
+            <br>
+            <input type="submit" value="Entrar">
+            
+            </form>
+
+            <br>
+            <a href="/new-user">Não tenho cadastro</a>
+
+        <% } else { %>
+            <h1>Vc já logou... Aproveite e compre muito</h1>
+            <h2><a href='/deslogar'>SAIR</a></h2>
+        <% } %>
+    </main>
+
+    <footer>
+        Desenvolvido por Vinícius Machado (Prof Vini)
+    </footer>
+</body>
+
+</html>
