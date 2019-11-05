@@ -19,12 +19,12 @@ app.use(routes);
 
 app.use((req, res) => {
     res.status(404);
-    res.write("ERRO! PÁGINA INEXISTENTE!");
+    res.write("ERRO! PAGINA INEXISTENTE!");
     res.end();
 });
 
 
-const mongoURL = "mongodb+srv://profvini:Yv1YVXihFe1Gixvx@profvini-kf6xa.mongodb.net/aulas?retryWrites=true&w=majority";
+const mongoURL = "mongodb://localhost:27017/aulas";
 
 mongoose.connect(mongoURL).then(result => {
     app.listen(3000, () => console.log("Listening at 3000"));

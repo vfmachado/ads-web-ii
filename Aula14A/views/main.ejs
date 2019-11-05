@@ -33,50 +33,26 @@
           </tr>
         </thead>
         <tbody>
+          <% for (let i = 0; i < users.length; i++) { %>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= users[i].nickname %></td>
+            <td><%= users[i].name.split(' ')[0] %></td>
+            <td><%= users[i].name.split(' ')[1] %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].phone %></td>
             <td>
-                <button type="button" class="btn btn-info">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <a href="/editar/<%= users[i]._id %>" type="button" class="btn btn-info">Edit</a>
+                <a href="/delete/<%= users[i]._id %>" type="button" class="btn btn-danger">Delete</a>
             </td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>
-                <button type="button" class="btn btn-info">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>
-                <button type="button" class="btn btn-info">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-
-          </tr>
+          <% } %>
         </tbody>
       </table>
 
       <hr>
 
-      <button type="button" class="btn btn-success btn-lg">ADD</button>
+      <a type="button" class="btn btn-success btn-lg" href="/add-user.html">ADD</a>
 
       </div>
       </div>
