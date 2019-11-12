@@ -24,7 +24,8 @@ app.use((req, res) => {
 });
 
 
-const mongoURL = "mongodb://localhost:27017/aulas";
+const mongoURL = "";
+
 
 mongoose.connect(mongoURL).then(result => {
     app.listen(3000, () => console.log("Listening at 3000"));
