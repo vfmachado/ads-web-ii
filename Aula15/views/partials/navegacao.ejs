@@ -1,30 +1,41 @@
 <header class="main-header">
-    <nav class="main-header-nav">
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+
+        <a class="navbar-brand" href="/">IFE</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
         <!-- itens da esquerda -->
-        <ul class="main-header-list">
-            <li class="main-header-item"><a href="/">Início</a></li>
-            <li class="main-header-item"><a href="/">Produtos</a></li>
-            <li class="main-header-item"><a href="/">Ofertas</a></li>
-        </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="/">Início</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/">Produtos</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/">Ofertas</a></li>
+            </ul>
+        
         <!-- itens da direita -->
-        <ul class="main-header-list">
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
             
             <% if (!user) { %>
             
-                <li class="main-header-item"><a href="/login">Login</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/login">Login</a></li>
 
             <% } else if (user && user.isadmin) { %>
             
-                <li class="main-header-item"><a href="/admin/add-product">Add Produto</a></li>
-                <li class="main-header-item"><a href="/login">ADMIN</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/admin/add-product">Add Produto</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/login">ADMIN</a></li>
             
             <% } else if (user && !user.isadmin) { %>
             
-                <li class="main-header-item"><a href="/login"><%= user.name.split(" ")[0] %></a></li>
+                <li class="nav-item active"><a class="nav-link" href="/login"><%= user.name.split(" ")[0] %></a></li>
             
             <% } %>
                
-             
         </ul>
+    </div>
     </nav>
 </header>
