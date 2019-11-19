@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <button onclick="mostraTexto()">Click me</button>
+
+    <p id="texto"></p>
+
+    <hr />
+
+    <input id="nome">
+    <button onclick="enviaNomeAPI()">ADD</button>
+
+    <br>
+
+    <button onclick="enviaNomeAPIPOST()">ADD</button>
+
+    <hr />
+
+    <button onclick=g1()>Busca G1</button>
+
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        
+
+        function g1()  {
+            $.get('https://g1.globo.com/', (data, status) => {
+                
+                $("#texto").html(JSON.stringify(data));
+            })
+        }
+
+        setInterval(function(){ 
+
+            $.get('https://localhost:3000/nomes', (data, status) => {
+                    let dados = JSON.parse(data);
+                    console.log(dados);
+                    
+                    $("#lista").html("");
+
+                    for (let i = 0; i < dados.length; i++) {
+                        console.log(dados[i]);
+                        $("#lista").append("<li>"+dados[i]+"</li>");
+                    }
+                    
+                })
+
+        }, 3000);
+
+        function mostraTexto() {
+            
+            $.get("https://localhost:3000",  function(dados, status) {
+
+                if (status == "success") {
+                    $("#texto").html(JSON.stringify(dados));
+                    console.log(dados)
+                } else {
+                    $("#texto").html("Ocorreu um erro: " + status);
+                }
+            });
+        }
+
+
+        function enviaNomeAPIPOST() {
+
+            $.post(
+                    'https://localhost:3000/add-nome', //url
+                    {
+                        name: $("#nome").val()  //dados
+                    },
+                    
+                    function(data, status){         //funcao de callback
+                        if (status == "success") {
+                            alert("Enviado e recebido!");
+                        } else {
+                            alert(JSON.stringify(status));
+                        }
+                    }
+                );
+
+        }
+
+
+        function enviaNomeAPI() {
+            
+            console.log($("#nome").val());
+            let nome = $("#nome").val();
+            $.get("https://localhost:3000/add-nome/" + nome, (data , status, xhr) => {
+
+                console.log("STATUS: " + JSON.stringify(status));
+
+                if (status == "success") {
+                    alert("Enviado e recebido!");
+                } else {
+                    alert(JSON.stringify(status));
+                }
+
+               
+
+            });
+        }
+    
+    </script>
+
+</body>
+</html>

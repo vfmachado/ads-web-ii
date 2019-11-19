@@ -1,0 +1,38 @@
+
+<%- include('partials/head') %>
+
+</head>
+
+<body>
+
+    
+    <%- include('partials/navegacao') %>
+
+    <main>
+        
+        <form action="/admin/add-product" method="POST" enctype="multipart/form-data">
+            <label for="name">Nome</label>
+            <input name="name" id="name"/>
+            <br>
+            <label for="price">Preço</label>
+            <input type="number" name="price" id="price"/>
+            <br>
+            <label for="description">Descricao</label>
+            <input name="description" id="description"/>
+            <br>
+            <!--
+            <label for="image">Imagem Destaque</label>
+            <input name="image" type="file"  id="image"/>
+            <br>
+            -->
+            <label for="images">Outras Imagens</label>
+            <input name="images" type="file"  id="images" multiple />
+            <br>
+            <button>Cadastrar!!!</button>
+            <br>
+        </form>
+
+    </main>
+
+</body>
+</html>

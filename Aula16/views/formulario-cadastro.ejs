@@ -1,0 +1,33 @@
+
+<%- include('partials/head') %>
+
+</head>
+
+<body>
+
+    
+    <%- include('partials/navegacao') %>
+
+    <main>
+        
+        <form action="/new-user-form" method="POST">
+            <label for="name">Nome</label>
+            <input name="name" id="name"/>
+            <br>
+            <label for="cpf">CPF</label>
+            <input name="cpf" id="cpf"/>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"/>
+            <br>
+            <label for="pass">Senha</label>
+            <input type="password" name="pass" id="pass"/>
+            <br>
+            <button>Cadastrar!!!</button>
+            <br>
+        </form>
+
+    </main>
+
+</body>
+</html>

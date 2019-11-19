@@ -1,0 +1,62 @@
+
+<%- include('partials/head') %>
+
+<style>
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+    
+    <%- include('partials/navegacao') %>
+
+    <main>
+
+        <% if (!logado) { %> 
+
+            <div class="text-center">
+            
+                    <br>
+
+                <% if (locals.erro) { %>
+                    <h3 class="text-danger""><%= erro %></h3>
+                <% } %>
+            
+                
+            
+                <form  class="form-signin" method="POST">
+                
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <br>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Senha" required>
+                   
+                    <br>
+                
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                
+                    <a class="btn btn-lg btn-danger btn-block" href="/new-user">Não tenho cadastro</a>
+                </form>
+
+                
+                
+            </div>
+        <% } else { %>
+            <h1>Vc já logou... Aproveite e compre muito</h1>
+            <h2><a href='/deslogar'>SAIR</a></h2>
+        <% } %>
+    </main>
+
+    <footer>
+        Desenvolvido por Vinícius Machado (Prof Vini)
+    </footer>
+</body>
+
+</html>
